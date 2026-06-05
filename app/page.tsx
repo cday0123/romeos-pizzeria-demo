@@ -13,9 +13,12 @@ export default function Home() {
       <a href="#contact">Contact</a>
     </div>
 
-    <button className="bg-red-600 px-5 py-2 rounded-full">
-      Order Now
-    </button>
+    <a
+  href="https://foodhub.co.uk"
+  className="bg-red-600 px-5 py-2 rounded-full"
+>
+  Order Now
+</a>
   </div>
 </nav>
       {/* Hero */}
@@ -166,12 +169,28 @@ export default function Home() {
       />
 
       <img
-        src="https://images.unsplash.com/photo-1548365328-9f547fb0953b"
-        className="rounded-3xl h-72 w-full object-cover"
-        alt="Pizza"
-      />
+  src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=1000&q=80"
+  className="rounded-3xl h-72 w-full object-cover"
+  alt="Pizza"
+/>
 
     </div>
+
+  </div>
+</section>
+<section id="about" className="py-24 px-6 bg-black">
+  <div className="max-w-4xl mx-auto text-center">
+
+    <h2 className="text-5xl font-bold mb-8">
+      About Romeo's Pizzeria
+    </h2>
+
+    <p className="text-xl text-gray-300 leading-relaxed">
+      Romeo's Pizzeria serves freshly made pizzas, kebabs and burgers
+      using quality ingredients and fast local delivery. We pride
+      ourselves on great food, friendly service and excellent value
+      for our customers.
+    </p>
 
   </div>
 </section>
@@ -184,7 +203,12 @@ export default function Home() {
 
     <div className="space-y-4 text-xl">
 
-      <p>📞 01472 123456</p>
+      <a
+  href="tel:01472123456"
+  className="block hover:text-red-500"
+>
+  📞 01472 123456
+</a>
 
       <p>📍 Grimsby, North East Lincolnshire</p>
 

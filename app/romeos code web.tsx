@@ -1,8 +1,25 @@
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen">
+    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">  
+  <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 className="text-2xl font-bold text-red-500">
+      Romeo's Pizzeria
+    </h1>
+
+    <div className="hidden md:flex gap-8">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <button className="bg-red-600 px-5 py-2 rounded-full">
+      Order Now
+    </button>
+  </div>
+</nav>
       {/* Hero */}
-      <section className="relative h-screen flex items-center justify-center text-center px-6">
+      <section className="relative h-screen flex items-center justify-center text-center px-6 pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -14,8 +31,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/70" />
 
         <div className="relative z-10 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6">
+          <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tight">
             Romeo's Pizzeria
+            <div className="inline-block mb-6 px-4 py-2 rounded-full bg-red-600/20 border border-red-500 text-red-400">
+  🍕 Grimsby's Favourite Pizza
+</div>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-10">
@@ -23,7 +43,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full font-semibold">
+            <button className="bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition">
               Order Online
             </button>
 
@@ -93,7 +113,90 @@ export default function Home() {
           </div>
         </div>
       </section>
+<section id="menu" className="py-24 bg-zinc-950 px-6">
+  <div className="max-w-6xl mx-auto">
 
+    <h2 className="text-5xl font-bold text-center mb-16">
+      Our Menu
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-zinc-900 p-8 rounded-3xl">
+        <h3 className="text-2xl font-bold mb-4">Pizzas</h3>
+        <p>Margherita - £8.99</p>
+        <p>Pepperoni - £10.99</p>
+        <p>BBQ Chicken - £11.99</p>
+        <p>Meat Feast - £12.99</p>
+      </div>
+
+      <div className="bg-zinc-900 p-8 rounded-3xl">
+        <h3 className="text-2xl font-bold mb-4">Kebabs</h3>
+        <p>Chicken Kebab - £8.99</p>
+        <p>Doner Kebab - £8.49</p>
+        <p>Mixed Kebab - £10.99</p>
+      </div>
+
+      <div className="bg-zinc-900 p-8 rounded-3xl">
+        <h3 className="text-2xl font-bold mb-4">Burgers</h3>
+        <p>Cheeseburger - £7.99</p>
+        <p>Double Burger - £9.99</p>
+        <p>Chicken Burger - £8.49</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section className="py-24 px-6 bg-black">
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-5xl font-bold text-center mb-16">
+      Food Gallery
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <img
+        src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+        className="rounded-3xl h-72 w-full object-cover hover:scale-105 transition-all duration-300"
+        alt="Pizza"
+      />
+
+      <img
+  src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+  className="rounded-3xl h-72 w-full object-cover hover:scale-105 transition-all duration-300"
+  alt="Pizza"
+/>
+
+      <img
+        src="https://images.unsplash.com/photo-1548365328-9f547fb0953b"
+        className="rounded-3xl h-72 w-full object-cover hover:scale-105 transition-all duration-300"
+        alt="Pizza"
+      />
+
+    </div>
+
+  </div>
+</section>
+<section id="contact" className="py-24 bg-zinc-950 px-6">
+  <div className="max-w-4xl mx-auto text-center">
+
+    <h2 className="text-5xl font-bold mb-10">
+      Contact Us
+    </h2>
+
+    <div className="space-y-4 text-xl">
+
+      <p>📞 01472 123456</p>
+
+      <p>📍 Grimsby, North East Lincolnshire</p>
+
+      <p>🕒 Open Daily: 11am - 11pm</p>
+
+    </div>
+
+  </div>
+</section>
       {/* Reviews */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
@@ -145,6 +248,23 @@ export default function Home() {
 
         <p>Pizza • Kebabs • Burgers • Delivery</p>
       </footer>
+      <footer className="bg-black border-t border-zinc-800 py-10">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    <h3 className="text-2xl font-bold mb-4">
+      Romeo's Pizzeria
+    </h3>
+
+    <p className="text-gray-400 mb-4">
+      Fresh Pizza • Fast Delivery • Local Favourite
+    </p>
+
+    <p className="text-gray-500">
+      © 2026 Romeo's Pizzeria. All rights reserved.
+    </p>
+
+  </div>
+</footer>
     </main>
   );
 }
